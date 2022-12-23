@@ -10,6 +10,13 @@ export const StudentHeaderDivContainer = styled.div`
   div {
     width: calc(95% / 3);
   }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    div {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
 `;
 
 export const StudentTableDiv = styled.div`

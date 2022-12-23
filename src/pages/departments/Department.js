@@ -118,7 +118,7 @@ const Department = () => {
           </div>
         </StudentHeaderDivContainer>
         <StudentTableDiv>
-          {/* {getDepartmentLoading ? (
+          {getDepartmentLoading ? (
             <div
               style={{
                 display: "flex",
@@ -129,43 +129,45 @@ const Department = () => {
             >
               <SpinnerLoader />
             </div>
-          ) : ( */}
-          <table>
-            <thead>
-              <tr>
-                <th>Department Name</th>
+          ) : (
+            <table>
+              <thead>
+                <tr>
+                  <th>Department Name</th>
 
-                <th></th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              {item.map((item) => {
-                return (
-                  <tr key={item.id}>
-                    <td>{item.name}</td>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                {item.map((item) => {
+                  return (
+                    <tr key={item.id}>
+                      <td>{item.name}</td>
 
-                    <td>
-                      <FiEdit2
-                        onClick={() => handleDepartmentEditForm(item.id)}
-                      />
-                    </td>
-                    <td>
-                      <AiTwotoneDelete onClick={() => handleDelete(item.id)} />
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-          {/* )} */}
+                      <td>
+                        <FiEdit2
+                          onClick={() => handleDepartmentEditForm(item.id)}
+                        />
+                      </td>
+                      <td>
+                        <AiTwotoneDelete
+                          onClick={() => handleDelete(item.id)}
+                        />
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          )}
         </StudentTableDiv>
         <PaginationContainer>
           <ReactPaginate
             breakLabel="..."
             nextLabel="next "
             onPageChange={handlePageClick}
-            pageCount={8}
+            pageCount={5}
             marginPagesDisplayed={3}
             // pageRangeDisplayed={3}
             previousLabel="prev"
